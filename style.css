@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-header{
+header {
 
     display: flex;
     justify-content: center;
@@ -47,30 +47,48 @@ body {
     font-size: 20px;
     color: #FFE700;
     border-radius: 20px;
-    border: 5px solid #FFE700; 
+    border: 5px solid #FFE700;
     font-family: 'Poppins', sans-serif;
     transition: background-color 0.3s, color 0.3s;
     cursor: pointer;
 }
 
-.option:hover{
-    background-color: #8B7F18; 
+.option:hover {
+    background-color: #8B7F18;
     color: #ffffff;
 }
 
 .abertura {
-    font-size: 24px; 
+    font-size: 24px;
     color: #FFE700;
-    text-align: center; 
-    padding: 20px; 
+    text-align: center;
+    padding: 20px;
 
 }
 
 
 .episodio {
-    font-size: 36px; 
-    color: #FFE700; 
-    text-align: center; 
-    margin-top: 20px; 
+    font-size: 36px;
+    color: #FFE700;
+    text-align: center;
+    margin-top: 20px;
 }
 
+.creditos {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: rotateX(50deg) scale(0.55, 0.3) translateY(120vh);
+    animation: 60s linear 0s infinite translateText;
+    font-size: 64px;
+}
+
+@keyframes translateText {
+    0% {
+        transform: rotateX(50deg) scale(0.55, 0.3) translateY(120vh);
+    }
+
+    100% {
+        transform: rotateX(50deg) scale(0.55, 0.3) translateY(-400vh);
+    }
+}
