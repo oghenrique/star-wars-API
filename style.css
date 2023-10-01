@@ -5,7 +5,10 @@
 }
 
 header{
-    padding-left: 750px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 60px;
 }
 
@@ -70,3 +73,4 @@ body {
     text-align: center; 
     margin-top: 20px; 
 }
+
