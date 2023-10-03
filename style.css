@@ -5,7 +5,6 @@
 }
 
 header {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,14 +19,13 @@ body {
     background-repeat: no-repeat;
     align-items: center;
     justify-content: center;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
-
-main{
-    margin: 50% 0 0 0;
+main {
+    height: 100%;
     position: relative;
-    background-color: black;
+    overflow-y: auto; 
 }
 
 .container-logo {
@@ -71,8 +69,6 @@ main{
     height: 100%;
     width: 60%;
     margin: 0 auto;
-    /* perspective gives us a 3d space within the element to work with*/
-    /* perspective also has the effect of pushing the content "down" */
     perspective: 450px;
   }
   .scroll-text {
