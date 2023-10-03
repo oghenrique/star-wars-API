@@ -78,13 +78,13 @@ main {
     font-weight: bold;
     text-align: justify;
     position: relative;
-    animation: scroll 60s linear forwards;
+    animation: scroll 90s linear infinite;
   }
   h1,h2 {
     text-align: center;
   }
   
   @keyframes scroll {
-      from { top: 0; transform: translateZ(0) rotateX(20deg); }
-      to { top: -7500px; transform: translateZ(-2500px) rotateX(21deg); }
-  }
+    0% { top: 100%; transform: translateZ(0) rotateX(20deg); }
+    100% { top: -7500px; transform: translateZ(-2500px) rotateX(21deg); }
+}
