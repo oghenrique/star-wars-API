@@ -26,6 +26,7 @@ main {
     height: 100%;
     position: relative;
     overflow-y: auto; 
+    overflow: hidden;
 }
 
 
