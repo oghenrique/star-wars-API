@@ -14,3 +14,15 @@ body {
     justify-content: center;
     overflow: hidden;
 }
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.logo {
+    width: 500px;
+    cursor: pointer;
+}
