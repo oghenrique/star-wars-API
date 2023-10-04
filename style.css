@@ -95,6 +95,12 @@ footer {
     font-family: 'Poppins', sans-serif;
     user-select: none;
   }
+
+  button{
+    background-color: transparent;
+    border-color: transparent;
+  }
+
 h1{
     font-size: 140px;
     text-align: center;
