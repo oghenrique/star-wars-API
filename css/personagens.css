@@ -26,3 +26,17 @@ header {
     width: 500px;
     cursor: pointer;
 }
+
+main{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.card-container{
+    background-color: #ffc909;
+    width: 400px;
+    height: 500px;
+    margin-top: 50px;
+    border-radius: 10%;
+}
