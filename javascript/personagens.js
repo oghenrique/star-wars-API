@@ -1,17 +1,20 @@
 'use strict'
 
-function getCharacters() {
-    fetch('https://swapi.dev/api/people/?page=1')
+function getCharacters(pageNumber) {
+    fetch(`https://swapi.dev/api/people/?page=${pageNumber}`)
         .then((response) => response.json())
         .then((responseJson) => {
             responseJson.results.forEach((character) => {
-                addCharacter(character);
-            });
-        })
-        .catch((error) => console.log(error));
-}
+                addCharacter(character)
+            })
 
-getCharacters();
+            if (responseJson.next) {
+                const nextPageNumber = pageNumber + 1
+                getCharacters(nextPageNumber)
+            }
+        })
+        .catch((error) => console.log(error))
+}
 
 function addCharacter(character) {
     const characterContent = `
@@ -30,8 +33,10 @@ function addCharacter(character) {
                 </div>
             </div>
         </div>
-    `;
+    `
 
-    const sectionGrid = document.getElementsByClassName('card-container')[0];
-    sectionGrid.insertAdjacentHTML('beforeEnd', characterContent);
+    const sectionGrid = document.getElementsByClassName('card-container')[0]
+    sectionGrid.insertAdjacentHTML('beforeEnd', characterContent)
 }
+
+getCharacters(1)
