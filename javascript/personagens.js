@@ -1,19 +1,27 @@
 'use strict'
 
+function hideLoadingGif() {
+    const loadingGif = document.getElementById('loading-gif');
+    const loadingText = document.getElementById('loading-text');
+    loadingGif.style.display = 'none';
+    loadingText.style.display = 'none';
+}
+
 function getCharacters(pageNumber) {
     fetch(`https://swapi.dev/api/people/?page=${pageNumber}`)
         .then((response) => response.json())
         .then((responseJson) => {
+            hideLoadingGif();
             responseJson.results.forEach((character) => {
-                addCharacter(character)
-            })
+                addCharacter(character);
+            });
 
             if (responseJson.next) {
-                const nextPageNumber = pageNumber + 1
-                getCharacters(nextPageNumber)
+                const nextPageNumber = pageNumber + 1;
+                getCharacters(nextPageNumber);
             }
         })
-        .catch((error) => console.log(error))
+        .catch((error) => console.log(error));
 }
 
 function addCharacter(character) {
@@ -33,10 +41,10 @@ function addCharacter(character) {
                 </div>
             </div>
         </div>
-    `
+    `;
 
-    const sectionGrid = document.getElementsByClassName('card-container')[0]
-    sectionGrid.insertAdjacentHTML('beforeEnd', characterContent)
+    const sectionGrid = document.getElementsByClassName('card-container')[0];
+    sectionGrid.insertAdjacentHTML('beforeEnd', characterContent);
 }
 
-getCharacters(1)
+getCharacters(1);
