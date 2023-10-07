@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,7 +12,7 @@ body {
     background-repeat: no-repeat;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 header {
@@ -27,7 +27,7 @@ header {
     cursor: pointer;
 }
 
-main{
+main {
     align-items: center;
     justify-content: center;
     display: flex;
@@ -40,3 +40,55 @@ main{
     margin-top: 50px;
     border-radius: 10%;
 } */
+
+.card {
+    background-color: #ffc909;
+    width: 18rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.card>h1 {
+    color: black;
+}
+
+.imagem {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.imagem img {
+    width: 15rem;
+    height: 15rem;
+}
+
+.info {
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info>h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.info h3 {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    margin: 5rem 6.25rem;
+}
+
