@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     audio.addEventListener('play', function () {
-        reproduzir(audio, iconeAudio, musica)
+        reproduzir(iconeAudio, musica)
     })
 
     audio.addEventListener('pause', function () {
-        pausa(audio, iconeAudio, musica)
+        pausa(iconeAudio, musica)
     })
 })
