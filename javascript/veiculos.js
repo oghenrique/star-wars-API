@@ -21,30 +21,42 @@ function getVehicles(pageNumber) {
                 getVehicles(nextPageNumber)
             }
         })
-        .catch((error) => console.log(error))
+        .catch((error) => {
+            console.error(error)
+        })
 }
 
 function addVehicle(vehicle) {
-    const vehicleContent = `
-        <div class="card">
-            <h1>${vehicle.name}</h1>
-            <div class="imagem">
-                <img src="https://starwars-visualguide.com/assets/img/vehicles/${vehicle.url.replace(/\D/g, '')}.jpg" 
-                alt="${vehicle.name}">
-            </div>
-            <div class="info">
-                <h2>About:</h2>
-                <div class="info-content">
-                    <h3>Name: ${vehicle.name}</h3>
-                    <h3>Model: ${vehicle.model}</h3>
-                    <h3>Manufacturer: ${vehicle.manufacturer}</h3>
+    const vehicleImage = new Image()
+    vehicleImage.src = `https://starwars-visualguide.com/assets/img/vehicles/${vehicle.url.replace(/\D/g, '')}.jpg`
+    vehicleImage.alt = vehicle.name
+
+    vehicleImage.onerror = function () {
+        vehicleImage.src = '../img/erro.png'
+        vehicleImage.alt = 'Image not found'
+    }
+
+    vehicleImage.onload = function () {
+        const vehicleContent = `
+            <div class="card">
+                <h1>${vehicle.name}</h1>
+                <div class="imagem">
+                    ${vehicleImage.outerHTML}
+                </div>
+                <div class="info">
+                    <h2>About:</h2>
+                    <div class="info-content">
+                        <h3>Name: ${vehicle.name}</h3>
+                        <h3>Model: ${vehicle.model}</h3>
+                        <h3>Manufacturer: ${vehicle.manufacturer}</h3>
+                    </div>
                 </div>
             </div>
-        </div>
-    `
+        `
 
-    const sectionGrid = document.getElementsByClassName('card-container')[0]
-    sectionGrid.insertAdjacentHTML('beforeEnd', vehicleContent)
+        const sectionGrid = document.getElementsByClassName('card-container')[0]
+        sectionGrid.insertAdjacentHTML('beforeEnd', vehicleContent)
+    }
 }
 
 getVehicles(1)

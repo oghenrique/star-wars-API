@@ -7,6 +7,43 @@ function hideLoadingGif() {
     loadingText.style.display = 'none'
 }
 
+function addPlanet(planet) {
+    if (!planet.url) {
+        return
+    }
+
+    const planetImage = new Image()
+    planetImage.src = `https://starwars-visualguide.com/assets/img/planets/${planet.url.replace(/\D/g, '')}.jpg`
+    planetImage.alt = planet.name
+
+    planetImage.onerror = function () {
+        planetImage.src = '../img/erro.png'
+        planetImage.alt = 'Image not found'
+    }
+
+    planetImage.onload = function () {
+        const planetContent = `
+            <div class="card">
+                <h1>${planet.name}</h1>
+                <div class="imagem">
+                    ${planetImage.outerHTML}
+                </div>
+                <div class="info">
+                    <h2>About:</h2>
+                    <div class="info-content">
+                        <h3>Name: ${planet.name}</h3>
+                        <h3>Climate: ${planet.climate}</h3>
+                        <h3>Population: ${planet.population}</h3>
+                    </div>
+                </div>
+            </div>
+        `
+
+        const sectionGrid = document.getElementsByClassName('card-container')[0]
+        sectionGrid.insertAdjacentHTML('beforeEnd', planetContent)
+    }
+}
+
 function getPlanets(pageNumber) {
     fetch(`https://swapi.dev/api/planets/?page=${pageNumber}`)
         .then((response) => response.json())
@@ -24,33 +61,6 @@ function getPlanets(pageNumber) {
             }
         })
         .catch((error) => console.log(error))
-}
-
-function addPlanet(planet) {
-    if (!planet.url) {
-        return
-    }
-
-    const planetContent = `
-        <div class="card">
-            <h1>${planet.name}</h1>
-            <div class="imagem">
-                <img src="https://starwars-visualguide.com/assets/img/planets/${planet.url.replace(/\D/g, '')}.jpg" 
-                alt="${planet.name}">
-            </div>
-            <div class="info">
-                <h2>About:</h2>
-                <div class="info-content">
-                    <h3>Name: ${planet.name}</h3>
-                    <h3>Climate: ${planet.climate}</h3>
-                    <h3>Population: ${planet.population}</h3>
-                </div>
-            </div>
-        </div>
-    `
-
-    const sectionGrid = document.getElementsByClassName('card-container')[0]
-    sectionGrid.insertAdjacentHTML('beforeEnd', planetContent)
 }
 
 getPlanets(1)

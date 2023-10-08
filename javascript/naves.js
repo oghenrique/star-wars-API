@@ -21,7 +21,9 @@ function getStarships(pageNumber) {
                 getStarships(nextPageNumber)
             }
         })
-        .catch((error) => console.log(error))
+        .catch((error) => {
+            console.error(error)
+        })
 }
 
 function addStarship(starship) {
@@ -30,7 +32,7 @@ function addStarship(starship) {
             <h1>${starship.name}</h1>
             <div class="imagem">
                 <img src="https://starwars-visualguide.com/assets/img/starships/${starship.url.replace(/\D/g, '')}.jpg" 
-                alt="${starship.name}">
+                alt="${starship.name}" onerror="handleImageError(this)">
             </div>
             <div class="info">
                 <h2>About:</h2>
@@ -45,6 +47,11 @@ function addStarship(starship) {
 
     const sectionGrid = document.getElementsByClassName('card-container')[0]
     sectionGrid.insertAdjacentHTML('beforeEnd', starshipContent)
+}
+
+function handleImageError(img) {
+    img.src = '../img/erro.png'
+    img.alt = 'Image not found'
 }
 
 getStarships(1)
