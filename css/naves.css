@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,10 +9,10 @@ body {
     width: 100vw;
     background-image: url("../img/background.png");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 header {
@@ -25,4 +25,83 @@ header {
 .logo {
     width: 500px;
     cursor: pointer;
+}
+
+main {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background-color: #ffc909;
+    width: 18rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.card > h1 {
+    color: black;
+}
+
+.imagem {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.imagem img {
+    width: 15rem;
+    height: 15rem;
+}
+
+.info {
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info > h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.info h3 {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+}
+
+.gif-vader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#loading-gif {
+    display: block;
+    margin: 0 auto;
+}
+
+#loading-text {
+    color: #ffc909;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    justify-items: center;
+    margin: 20px 6.25rem;
 }
