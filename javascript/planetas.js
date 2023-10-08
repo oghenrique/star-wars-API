@@ -13,7 +13,9 @@ function getPlanets(pageNumber) {
         .then((responseJson) => {
             hideLoadingGif()
             responseJson.results.forEach((planet) => {
-                addPlanet(planet)
+                if (planet.url) {
+                    addPlanet(planet)
+                }
             })
 
             if (responseJson.next) {
@@ -25,6 +27,10 @@ function getPlanets(pageNumber) {
 }
 
 function addPlanet(planet) {
+    if (!planet.url) {
+        return
+    }
+
     const planetContent = `
         <div class="card">
             <h1>${planet.name}</h1>
