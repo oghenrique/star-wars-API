@@ -35,6 +35,7 @@ main {
 }
 
 .card {
+    background: linear-gradient(to bottom, #FFFF00, #FF8C00);
     background-color: #ffc909;
     width: 18rem;
     padding: 1.5rem;
@@ -100,7 +101,7 @@ main {
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
     justify-items: center;
     margin: 20px 6.25rem;

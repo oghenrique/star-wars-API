@@ -35,11 +35,13 @@ main {
 }
 
 .card {
-    background-color: #ffc909;
+    background: linear-gradient(to bottom, #FFFF00, #FF8C00);
+    background-size: 500% 100%;
     width: 18rem;
     padding: 1.5rem;
     border-radius: 12px;
 }
+
 
 .card > h1 {
     color: black;
@@ -100,7 +102,7 @@ main {
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1rem;
     justify-items: center;
     margin: 20px 6.25rem;
