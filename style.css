@@ -117,37 +117,5 @@ h2{
     100% { top: -7500px; transform: translateZ(-2500px) rotateX(21deg); }
 }
 
-.audio-icon {
-    width: 40px;
-    height: 40px;
-    background-color: yellow;
-    border-radius: 50%;
-    margin-right: 10px;
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    padding: 10px;
-    background-image: url(./img/play.png);
-    background-size: 16px 16px;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-}
-
-.audio-playing {
-    background-image: url(./img/pause.png);
-    background-size: 20px 20px;
-}
-
-
-#audioPlayer {
-    display: none;
-}
-
-#customAudio {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
 
 
