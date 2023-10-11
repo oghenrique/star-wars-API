@@ -40,11 +40,14 @@ main {
     width: 18rem;
     padding: 1.5rem;
     border-radius: 12px;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .card > h1 {
     color: black;
+
 }
 
 .imagem {
@@ -102,7 +105,7 @@ main {
 
 .card-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     justify-items: center;
     margin: 20px 6.25rem;

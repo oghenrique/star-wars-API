@@ -39,16 +39,15 @@ function addFilm(film) {
     filmImage.onload = function () {
         const filmContent = `
             <div class="card">
-                <h1>${film.title}</h1>
+               <h1>${film.title}</h1>
                 <div class="imagem">
                     ${filmImage.outerHTML}
                 </div>
                 <div class="info">
-                    <h2>About:</h2>
                     <div class="info-content">
-                        <h3>Title: ${film.title}</h3>
-                        <h3>Director: ${film.director}</h3>
-                        <h3>Release Date: ${film.release_date}</h3>
+                        <p>Episódio: ${film.episode_id}</p>
+                        <p>Diretor: ${film.director}</p>
+                        <p>Lançamento: ${film.release_date}</p>
                     </div>
                 </div>
             </div>
