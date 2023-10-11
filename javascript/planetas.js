@@ -29,11 +29,10 @@ function addPlanet(planet) {
                     ${planetImage.outerHTML}
                 </div>
                 <div class="info">
-                    <h2>About:</h2>
                     <div class="info-content">
-                        <h3>Name: ${planet.name}</h3>
-                        <h3>Climate: ${planet.climate}</h3>
-                        <h3>Population: ${planet.population}</h3>
+                        <p>Terreno: ${planet.terrain}</p>
+                        <p>Clima: ${planet.climate}</p>
+                        <p>População: ${planet.population}</p>
                     </div>
                 </div>
             </div>

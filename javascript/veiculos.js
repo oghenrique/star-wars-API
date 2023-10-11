@@ -44,11 +44,10 @@ function addVehicle(vehicle) {
                     ${vehicleImage.outerHTML}
                 </div>
                 <div class="info">
-                    <h2>About:</h2>
                     <div class="info-content">
-                        <h3>Name: ${vehicle.name}</h3>
-                        <h3>Model: ${vehicle.model}</h3>
-                        <h3>Manufacturer: ${vehicle.manufacturer}</h3>
+                        <p>Custo em créditos: ${vehicle.cost_in_credits}</p>
+                        <p>Modelo: ${vehicle.model}</p>
+                        <p>Passageiros: ${vehicle.passengers}</p>
                     </div>
                 </div>
             </div>

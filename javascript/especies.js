@@ -44,11 +44,10 @@ function addSpecies(species) {
                     ${speciesImage.outerHTML}
                 </div>
                 <div class="info">
-                    <h2>About:</h2>
                     <div class="info-content">
-                        <h3>Name: ${species.name}</h3>
-                        <h3>Classification: ${species.classification}</h3>
-                        <h3>Language: ${species.language}</h3>
+                        <p>Espécie: ${species.name}</p>
+                        <p>Classificação: ${species.classification}</p>
+                        <p>Idioma: ${species.language}</p>
                     </div>
                 </div>
             </div>

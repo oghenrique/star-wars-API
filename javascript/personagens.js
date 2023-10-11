@@ -45,11 +45,10 @@ function addCharacter(character) {
                     ${characterImage.outerHTML}
                 </div>
                 <div class="info">
-                    <h2>About:</h2>
                     <div class="info-content">
-                        <h3>Name: ${character.name}</h3>
-                        <h3>Ano Nascimento: ${character.birth_year}</h3>
-                        <h3>Gênero: ${character.gender}</h3>
+                        <p>Gênero: ${character.gender}</p>
+                        <p>Ano Nascimento: ${character.birth_year}</p>
+                        <p>Altura: ${character.height}cm</p>
                     </div>
                 </div>
             </div>

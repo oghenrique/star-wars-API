@@ -35,11 +35,10 @@ function addStarship(starship) {
                 alt="${starship.name}" onerror="handleImageError(this)">
             </div>
             <div class="info">
-                <h2>About:</h2>
                 <div class="info-content">
-                    <h3>Name: ${starship.name}</h3>
-                    <h3>Model: ${starship.model}</h3>
-                    <h3>Passengers: ${starship.passengers}</h3>
+                    <p>Altura: ${starship.lenght}</p>
+                    <p>Modelo: ${starship.model}</p>
+                    <p>Passageiros: ${starship.passengers}</p>
                 </div>
             </div>
         </div>
