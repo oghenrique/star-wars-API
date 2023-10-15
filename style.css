@@ -46,7 +46,7 @@ footer {
 }
 
 .logo {
-    width: 500px;
+    width: 31.25rem;
     cursor: pointer;
 }
 
@@ -62,9 +62,9 @@ footer {
     font-weight: bold;
     text-align: center;
     line-height: 3rem;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: #FFE700;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     border: 5px solid #FFE700;
     font-family: 'Poppins', sans-serif;
     transition: background-color 0.3s, color 0.3s;
@@ -103,12 +103,12 @@ button {
 }
 
 h1 {
-    font-size: 140px;
+    font-size: 8.75rem;
     text-align: center;
 }
 
 h2 {
-    font-size: 60px;
+    font-size: 3.75rem;
     text-align: center;
 }
 
@@ -131,7 +131,7 @@ h2 {
     }
 
     .logo {
-        width: 300px;
+        width: 18.75rem;
     }
 
     .wrapper {
@@ -141,11 +141,11 @@ h2 {
     .container-options {
         display: grid;
         justify-content: space-around;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+        gap: 0.75rem;
         flex-direction: column;
-        margin-top: -230px;
-        margin-left: 10px;
+        align-items: center;
+        justify-content: center;
+        margin-top: -20rem;
 
     }
 
