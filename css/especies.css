@@ -19,7 +19,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 60px;
+    padding-top: 3.75rem;
 }
 
 .logo {
@@ -99,7 +99,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
 #loading-gif {
@@ -112,7 +112,7 @@ main {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 0.625;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -121,7 +121,28 @@ main {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     justify-items: center;
-    margin: 20px 6.25rem;
+    margin: 1.25rem 6.25rem;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .logo{
+        width: 300px;
+    }
+
+    .card {
+        background: transparent;
+        width: 20rem;
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 2px solid #ffc909;
+        
+    }
+    
+
 }
 
 

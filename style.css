@@ -25,7 +25,7 @@ body {
 main {
     height: 100%;
     position: relative;
-    overflow-y: auto; 
+    overflow-y: auto;
     overflow: hidden;
 }
 
@@ -35,7 +35,7 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 120px;
+    height: 7.5rem;
 }
 
 
@@ -56,12 +56,12 @@ footer {
 }
 
 .option {
-    width: 190px;
-    height: 60px;
+    width: 12rem;
+    height: 3.75rem;
     background-color: transparent;
     font-weight: bold;
     text-align: center;
-    line-height: 50px;
+    line-height: 3rem;
     font-size: 20px;
     color: #FFE700;
     border-radius: 20px;
@@ -82,9 +82,10 @@ footer {
     height: 100%;
     width: 60%;
     margin: 0 auto;
-    perspective: 450px;
-  }
-  .scroll-text {
+    perspective: 28rem;
+}
+
+.scroll-text {
     color: #ffc909;
     font-size: 3vw;
     line-height: 1.5em;
@@ -94,26 +95,67 @@ footer {
     animation: scroll 120s linear infinite;
     font-family: 'Poppins', sans-serif;
     user-select: none;
-  }
+}
 
-  button{
+button {
     background-color: transparent;
     border-color: transparent;
-  }
+}
 
-h1{
+h1 {
     font-size: 140px;
     text-align: center;
 }
 
-h2{
+h2 {
     font-size: 60px;
     text-align: center;
 }
 
-  
-  @keyframes scroll {
-    0% { top: 100%; transform: translateZ(0) rotateX(20deg); }
-    100% { top: -7500px; transform: translateZ(-2500px) rotateX(21deg); }
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+        transform: translateZ(0) rotateX(20deg);
+    }
+
+    100% {
+        top: -468.75rem;
+        transform: translateZ(-156.25rem) rotateX(21deg);
+    }
 }
 
+@media (max-width: 768px) {
+    main {
+        overflow: hidden;
+    }
+
+    .logo {
+        width: 300px;
+    }
+
+    .wrapper {
+        display: none;
+    }
+
+    .container-options {
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        flex-direction: column;
+        margin-top: -230px;
+        margin-left: 10px;
+
+    }
+
+    .option {
+        width: 10rem;
+        height: 3.25rem;
+        text-align: center;
+        font-size: 16px;
+        line-height: 2.75rem;
+    }
+
+
+}
