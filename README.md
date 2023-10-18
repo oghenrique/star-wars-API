@@ -35,8 +35,8 @@
 <br>
 
 ## Ferramentas Utilizadas
-<img src="https://github.com/oghenrique/star-wars-API/assets/123705623/c1e67c45-fb7e-49e7-9509-d1139754c8c7" width="95">
-<img src="https://github.com/oghenrique/star-wars-API/assets/123705623/5bb44175-7015-451d-8ace-8fc1b13d7acd" width="60">
-<img src="https://github.com/oghenrique/star-wars-API/assets/123705623/7206fcaa-45ef-456b-8a62-c54ae4ada9b5" width="90">
-<img src="https://github.com/oghenrique/star-wars-API/assets/123705623/a43769b3-3c97-440d-b3ab-daf056e5cc8a" width="70">
-<img src="https://github.com/oghenrique/star-wars-API/assets/123705623/d81a7486-3ba1-4623-bc24-42ab61319e06" width="40">
+  <img src="https://img.shields.io/badge/html5-ae0001.svg?style=for-the-badge&logo=html5&logoColor=EEBA30" alt="HTML5">
+  <img src="https://img.shields.io/badge/css3-ae0001.svg?style=for-the-badge&logo=css3&logoColor=EEBA30" alt="CSS3">
+  <img src="https://img.shields.io/badge/javascript-ae0001.svg?style=for-the-badge&logo=javascript&logoColor=EEBA30" alt="JavaScript">
+  <img src="https://img.shields.io/badge/Visual%20Studio-ae0001.svg?style=for-the-badge&logo=visual-studio&logoColor=EEBA30" alt="Visual Studio">
+  <img src="https://img.shields.io/badge/figma-ae0001.svg?style=for-the-badge&logo=figma&logoColor=EEBA30" alt="FIGMA">
